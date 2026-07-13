@@ -1,0 +1,13 @@
+resource_group_name  = "rg-<project>-<region>"
+vnet_name            = "vnet-se-<project>-<region>"
+address_space        = ["10.2.0.0/16"]     # 10.0, 10.1 already used
+subnet_name          = "snet-se-<project>-<region>"
+subnet_prefixes      = ["10.2.1.0/24"]
+storage_account_name = "stse<project><region>"   # globally unique, no hyphens
+container_name       = "cnt-se-<project>-<region>"
+
+tags = {
+  environment = "dev"
+  project     = "<project-name>"
+  owner       = "<your-name>"
+}
