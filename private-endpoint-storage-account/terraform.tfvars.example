@@ -1,0 +1,13 @@
+resource_group_name   = "rg-<project>-<region>"
+vnet_name             = "vnet-pe-<project>-<region>"
+address_space         = ["10.1.0.0/16"]
+subnet_name           = "snet-pe-<project>-<region>"
+subnet_prefixes       = ["10.1.1.0/24"]
+storage_account_name  = "<existing-storage-account-name>"
+private_endpoint_name = "pe-st-<project>-<region>"
+
+tags = {
+  environment = "dev"
+  project     = "<project-name>"
+  owner       = "<your-name>"
+}
