@@ -6,6 +6,10 @@ variable "resource_group_name" {
 variable "storage_account_name" {
   type        = string
   description = "Storage account name — globally unique, lowercase, max 24 chars, no hypen"
+  validation {
+    condition     = length(var.storage_account_name) <= 24 && can(regex("^[a-z0-9]+$", var.storage_account_name))
+    error_message = "Storage account name must be lowercase alphanumeric only and max 24 characters."
+  }
 }
 
 variable "account_tier" {

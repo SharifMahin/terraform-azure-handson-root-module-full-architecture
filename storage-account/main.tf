@@ -14,10 +14,10 @@ resource "azurerm_storage_account" "stg" {
   # WARNING: Do NOT set public_network_access_enabled = false before private
   # endpoint is ready — Terraform itself will lose access to Azure API and fail.
   # In production, use a self-hosted agent inside the VNet to avoid this issue.
-  
+
   #  public_network_access_enabled = false
 
-  tags                     = var.tags
+  tags = var.tags
 }
 
 resource "azurerm_storage_container" "cnt" {
